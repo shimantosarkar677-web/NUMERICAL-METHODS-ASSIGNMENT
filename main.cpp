@@ -44,4 +44,9 @@ Vector2 solveImplicitStep(Vector2 y_n, double h) {
         Matrix2x2 Jf = getJacobian(y_next);
 
         double M11 = 1.0 - h * Jf.a11;
+double M12 = -h * Jf.a12;
+        double M21 = -h * Jf.a21;
+        double M22 = 1.0 - h * Jf.a22;
+
+        double det = M11 * M22 - M12 * M21;
 
