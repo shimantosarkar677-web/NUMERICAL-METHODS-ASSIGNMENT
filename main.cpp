@@ -58,3 +58,10 @@ double delta1 = (-G1 * M22 + G2 * M12) / det;
 
         if (sqrt(delta1 * delta1 + delta2 * delta2) < tol)
 
+break;
+    }
+    return y_next;
+}
+
+int main() {
+    double t = 0.0
