@@ -64,4 +64,4 @@ break;
 }
 
 int main() {
-    double t = 0.0
+    double t = 0.0;
