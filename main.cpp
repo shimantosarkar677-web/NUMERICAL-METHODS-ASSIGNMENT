@@ -50,3 +50,11 @@ double M12 = -h * Jf.a12;
 
         double det = M11 * M22 - M12 * M21;
 
+double delta1 = (-G1 * M22 + G2 * M12) / det;
+        double delta2 = (M11 * (-G2) + M21 * G1) / det;
+
+        y_next.y1 += delta1;
+        y_next.y2 += delta2;
+
+        if (sqrt(delta1 * delta1 + delta2 * delta2) < tol)
+
