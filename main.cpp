@@ -38,3 +38,10 @@ Vector2 solveImplicitStep(Vector2 y_n, double h) {
     for (int i = 0; i < max_iters; ++i) {
         Vector2 func = f(y_next);
 
+        double G1 = y_next.y1 - y_n.y1 - h * func.y1;
+        double G2 = y_next.y2 - y_n.y2 - h * func.y2;
+
+        Matrix2x2 Jf = getJacobian(y_next);
+
+        double M11 = 1.0 - h * Jf.a11;
+
