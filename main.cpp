@@ -26,3 +26,15 @@ Matrix2x2 getJacobian(Vector2 y) {
         0.0, 1.0,
         -2.0 * MU * y.y1 * y.y2 - 1.0,
         MU * (1.0 - y.y1 * y.y1)
+
+    };
+}
+
+Vector2 solveImplicitStep(Vector2 y_n, double h) {
+    Vector2 y_next = y_n;
+    const int max_iters = 50;
+    const double tol = 1e-8;
+
+    for (int i = 0; i < max_iters; ++i) {
+        Vector2 func = f(y_next);
+
