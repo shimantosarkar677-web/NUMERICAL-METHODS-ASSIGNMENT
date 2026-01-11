@@ -17,3 +17,12 @@ Vector2 f(Vector2 y) {
         MU * (1.0 - y.y1 * y.y1) * y.y2 - y.y1
     };
 }
+struct Matrix2x2 {
+    double a11, a12, a21, a22;
+};
+
+Matrix2x2 getJacobian(Vector2 y) {
+    return {
+        0.0, 1.0,
+        -2.0 * MU * y.y1 * y.y2 - 1.0,
+        MU * (1.0 - y.y1 * y.y1)
