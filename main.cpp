@@ -65,3 +65,9 @@ break;
 
 int main() {
     double t = 0.0;
+double t_end = 1.0;
+    double h = 0.01;
+
+    Vector2 y = {2.0, 0.0};
+
+    cout << fixed << setprecision(6);
