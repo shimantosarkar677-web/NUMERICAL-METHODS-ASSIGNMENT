@@ -76,4 +76,10 @@ double t_end = 1.0;
     cout << "------------------------------------" << endl;
 while (t <= t_end) {
         cout << t << "\t" << y.y1 << "\t" << y.y2 << endl;
+y = solveImplicitStep(y, h);
+        t += h;
+    }
+
+    return 0;
+}
    
